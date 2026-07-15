@@ -1,0 +1,16 @@
+{
+  "name": "language-translation-tool",
+  "version": "1.0.0",
+  "description": "A simple language translation tool with source/target selection and copy/text-to-speech support.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.4",
+    "node-fetch": "^2.6.9"
+    ,"dotenv": "^16.0.3"
+  }
+}

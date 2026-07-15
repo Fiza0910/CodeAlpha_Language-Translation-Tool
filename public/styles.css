@@ -1,0 +1,148 @@
+:root {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color-scheme: light;
+  color: #1f2937;
+  background: #eef4f2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(
+    circle at top,
+    #f0f6f5 0%,
+    #f6faf8 42%,
+    #edf2f0 100%
+  );
+}
+
+.app-shell {
+  width: min(960px, 94vw);
+  padding: 38px;
+}
+
+h1 {
+  margin: 0 0 18px;
+  font-size: clamp(2rem, 2.6vw, 3rem);
+  text-align: center;
+  color: #102a29;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.98);
+  border-radius: 28px;
+  padding: 34px;
+  box-shadow: 0 24px 60px rgba(15, 23, 24, 0.08);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 700;
+  color: #334155;
+}
+
+textarea,
+select {
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  border-radius: 18px;
+  padding: 16px 18px;
+  font-size: 1rem;
+  line-height: 1.6;
+  resize: vertical;
+  background: #f8fafc;
+  color: #0f172a;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #6d9886;
+  box-shadow: 0 0 0 4px rgba(109, 152, 134, 0.16);
+}
+
+textarea[readonly] {
+  background: #eef4f2;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 18px 0 22px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  border: none;
+  border-radius: 16px;
+  padding: 14px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    background-color 0.18s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+.primary {
+  width: 100%;
+  margin-top: 10px;
+  background: linear-gradient(135deg, #7da79d 0%, #5f8a7d 100%);
+  color: #ffffff;
+  box-shadow: 0 18px 40px rgba(89, 120, 109, 0.18);
+}
+
+.actions {
+  display: flex;
+  gap: 14px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+#copyButton,
+#speakButton {
+  flex: 1;
+  min-width: 140px;
+  background: #faf9f5;
+  color: #22333b;
+}
+
+#copyButton:hover,
+#speakButton:hover {
+  background: #e8efe9;
+}
+
+.feedback {
+  min-height: 26px;
+  margin: 18px 0;
+  color: #334155;
+  font-size: 0.98rem;
+}
+
+@media (max-width: 640px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+}
